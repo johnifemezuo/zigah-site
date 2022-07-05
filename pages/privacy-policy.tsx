@@ -49,7 +49,7 @@ const PrivacyPolicy: NextPage<PrivacyPolicyPageProps> = ({
           </div>
 
           <div>
-            <div className="primary my-5">
+            <div className="primary my-5 content-styles">
               {ReactHtmlParser(privacy[0].content.html)}
             </div>
           </div>

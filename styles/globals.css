@@ -6,6 +6,7 @@ body {
   font-weight: 200 !important;
   margin: 0;
   background-color: #fffcf8 !important;
+  overflow-y: scroll;
 }
 
 * {
@@ -28,8 +29,19 @@ body {
   background-color: #391e32 !important;
 }
 
-.primary {
+/* .primary {
   color: #000a4a;
+} */
+
+.content-styles > p, ol {
+  font-size: 19px ;
+}
+.content-styles p > strong {
+  font-size: 20px;
+  font-weight: 500;
+}
+.content-styles p > a {
+  color: #FF00BB;
 }
 
 .primary-outline {
@@ -89,7 +101,7 @@ body {
 
 a {
   text-decoration: none !important;
-  color: #000a4a !important;
+  color: #000a4a;
 }
 
 .heading-line-height {

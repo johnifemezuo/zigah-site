@@ -30,7 +30,7 @@ const TermsOfService: NextPage<TermsOfServicePageProps> = ({
     <Layout pagename="Ziga | Terms of Service">
       <section>
         <div className="container mt-5">
-          <h1 className="primary display-3 fw-bold">Terms of service</h1>
+          <h1 className="primary display-3 fw-bold">Terms of Use</h1>
           <div className="primary my-3">
             Read our terms below to learn more about your rights and
             responsibilities as a ziga user.
@@ -50,7 +50,7 @@ const TermsOfService: NextPage<TermsOfServicePageProps> = ({
           </div>
 
           <div>
-            <div className="primary my-5">
+            <div className="primary my-5 content-styles">
               {ReactHtmlParser(terms[0].content.html)}
             </div>
           </div>
