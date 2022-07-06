@@ -19,7 +19,9 @@ const Layout: React.FC<LayoutProps> = ({ pagename, children }) => (
     <main>
       <Nav />
       <>{children}</>
+
       <Schedule />
+
       <Footer />
     </main>
   </StyledLayout>

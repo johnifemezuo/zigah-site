@@ -6,8 +6,21 @@ body {
   font-weight: 200 !important;
   margin: 0;
   background-color: #fffcf8 !important;
-  overflow-y: scroll;
+  overflow-y: visible !important;
+
+  
 }
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
 
 * {
   box-sizing: border-box;
@@ -29,9 +42,45 @@ body {
   background-color: #391e32 !important;
 }
 
+p {
+  font-size: 18px;
+}
+
 /* .primary {
   color: #000a4a;
 } */
+
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.flex-btn {
+  display: flex;
+  align-content: space-between;
+  align-items: center;
+  display: none;
+}
 
 .content-styles > p, ol {
   font-size: 19px ;
@@ -180,9 +229,11 @@ input:focus,
 
 .story-one-blob {
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 30%;
 }
+
+
 
 .second-story-spiral {
   position: absolute;
@@ -244,16 +295,20 @@ input:focus,
 }
 
 
+
+ .story-one-blob {
+    position: absolute;
+    top: 35%;
+    left: 0;
+  }
 @media only screen and (max-width: 600px) {
   .hero {
     background: #fefefe !important;
   }
 
-  .story-one-blob {
-    position: absolute;
-    top: 35%;
-    left: 0;
-  }
+ .story-one-blob {
+  display: none;
+}
 
   .second-story-blob {
     position: absolute;
