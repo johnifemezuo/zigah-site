@@ -16,7 +16,7 @@ const StoryTwo: FC<StoryTwoSectionProps> = ({
         <h1 className="primary-outline display-4 fw-bold">{storyTwo[0].title}</h1>
         <small className="secondary">{storyTwo[0].description}</small>
 
-        <div className="mb-4" style={{ maxWidth: '400px' }}>
+        <div className="mb-4" style={{ maxWidth: '340px' }}>
           <hr />
         </div>
         <div className="d-xl-flex d-lg-flex d-md-flex d-sm-block align-items-start gap-5 mt-2 mb-3">
