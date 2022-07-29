@@ -12,4 +12,4 @@ RUN yarn build
 
 EXPOSE 9009
 
-CMD ["PORT=9009", "yarn", "start"]
+CMD ["yarn", "start"]
