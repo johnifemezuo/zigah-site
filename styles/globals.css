@@ -50,6 +50,9 @@ p {
   color: #000a4a;
 } */
 
+.ppp {
+  display: none;
+}
 
 .lds-dual-ring {
   display: inline-block;
