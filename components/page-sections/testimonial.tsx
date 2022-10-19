@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import Image from 'next/image';
-import { Testimonial as ITestimonial } from '../../types/home';
+import React, { FC } from "react";
+import Image from "next/image";
+import { Testimonial as ITestimonial } from "../../types/home";
 
 interface TestimonialSectionProps {
   testimonials: ITestimonial[];

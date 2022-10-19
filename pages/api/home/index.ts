@@ -2,23 +2,23 @@ import {
   PrivacyPolicy,
   TermsOfService,
   Testimonial,
-} from '../../../types/home';
+} from "../../../types/home";
 import {
   IPrivacyResponse,
   IStoryOneResponse,
   IStoryTwoResponse,
   ITermsResponse,
   ITestimonialResponse,
-} from '../../../types/response';
-import { StoryOne, StoryTwo } from '../../../types/stories';
-import GraphCMSCLient from '../service';
+} from "../../../types/response";
+import { StoryOne, StoryTwo } from "../../../types/stories";
+import GraphCMSCLient from "../service";
 import {
   PrivacyPolicy as Privacy,
   StoryOnes,
   StoryTwos,
   TermsOfService as Terms,
   Testimonial as TestimonialService,
-} from './queries';
+} from "./queries";
 
 const FetchTermServices = async (params?: {}) => {
   const variable = params;

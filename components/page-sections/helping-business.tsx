@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const HelpingBusiness = () => (
   <div className="my-5 py-5">

@@ -1,29 +1,29 @@
-import type { NextPage } from 'next';
-import React from 'react';
-import { Layout } from '../components';
-import Blog from '../components/page-sections/blog';
-import HelpingBusiness from '../components/page-sections/helping-business';
-import Hero from '../components/page-sections/hero';
-import MoreInfo from '../components/page-sections/more-info';
-import Quote from '../components/page-sections/quote';
-import StoryOne from '../components/page-sections/story-one';
-import StoryTwo from '../components/page-sections/story-two';
-import Testimonial from '../components/page-sections/testimonial';
-import { IBlogProps } from '../types/blog';
-import { Testimonial as TestimonialType } from '../types/home';
+import type { NextPage } from "next";
+import React from "react";
+import { Layout } from "../components";
+import Blog from "../components/page-sections/blog";
+import HelpingBusiness from "../components/page-sections/helping-business";
+import Hero from "../components/page-sections/hero";
+import MoreInfo from "../components/page-sections/more-info";
+import Quote from "../components/page-sections/quote";
+import StoryOne from "../components/page-sections/story-one";
+import StoryTwo from "../components/page-sections/story-two";
+import Testimonial from "../components/page-sections/testimonial";
+import { IBlogProps } from "../types/blog";
+import { Testimonial as TestimonialType } from "../types/home";
 import {
   IPostsResponse,
   IStoryOneResponse,
   IStoryTwoResponse,
   ITestimonialResponse,
-} from '../types/response';
-import { StoryOne as IStoryOne, StoryTwo as IStoryTwo } from '../types/stories';
+} from "../types/response";
+import { StoryOne as IStoryOne, StoryTwo as IStoryTwo } from "../types/stories";
 import {
   FetchStoryOneServices,
   FetchStoryTwoServices,
   FetchTestimonialsServices,
-} from './api/home';
-import { FetchPostsService } from './api/posts';
+} from "./api/home";
+import { FetchPostsService } from "./api/posts";
 
 interface HomePageProps {
   blogs: IBlogProps[];

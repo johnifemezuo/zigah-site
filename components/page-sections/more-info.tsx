@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const MoreInfo = () => (
   <div className="help-business my-5 py-5">
@@ -10,7 +10,7 @@ const MoreInfo = () => (
           </small>
           <h1 className="text-light fw-bold mt-2 mb-3">
             Here&apos;s how ziga
-            <span style={{ fontWeight: '100' }}>&trade;</span>
+            <span style={{ fontWeight: "100" }}>&trade;</span>
             helps businesses
           </h1>
         </div>

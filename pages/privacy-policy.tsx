@@ -1,12 +1,12 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable padded-blocks */
-import { NextPage } from 'next';
-import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
-import { Layout } from '../components';
-import { PrivacyPolicy as Privacy } from '../types/home';
-import { IPrivacyResponse } from '../types/response';
-import { FetchPrivacyServices } from './api/home';
+import { NextPage } from "next";
+import React from "react";
+import ReactHtmlParser from "react-html-parser";
+import { Layout } from "../components";
+import { PrivacyPolicy as Privacy } from "../types/home";
+import { IPrivacyResponse } from "../types/response";
+import { FetchPrivacyServices } from "./api/home";
 
 export const getServerSideProps = async () => {
   const res: IPrivacyResponse<Privacy[]> = await FetchPrivacyServices();

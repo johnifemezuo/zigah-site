@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import React, { FC } from 'react';
-import ReactHtmlParser from 'react-html-parser';
-import { StoryTwo as IStoryTwo } from '../../types/stories';
+import Image from "next/image";
+import React, { FC } from "react";
+import ReactHtmlParser from "react-html-parser";
+import { StoryTwo as IStoryTwo } from "../../types/stories";
 
 interface StoryTwoSectionProps {
   storyTwo: IStoryTwo[];
@@ -18,7 +18,7 @@ const StoryTwo: FC<StoryTwoSectionProps> = ({
         </h1>
         <small className="secondary">{storyTwo[0].description}</small>
 
-        <div className="mb-4" style={{ maxWidth: '340px' }}>
+        <div className="mb-4" style={{ maxWidth: "340px" }}>
           <hr />
         </div>
         <div className="d-xl-flex d-lg-flex d-md-flex d-sm-block align-items-start gap-5 mt-2 mb-3">

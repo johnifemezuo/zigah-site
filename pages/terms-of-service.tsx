@@ -1,12 +1,12 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable padded-blocks */
-import { NextPage } from 'next';
-import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
-import { Layout } from '../components';
-import { TermsOfService as Terms } from '../types/home';
-import { ITermsResponse } from '../types/response';
-import { FetchTermServices } from './api/home';
+import { NextPage } from "next";
+import React from "react";
+import ReactHtmlParser from "react-html-parser";
+import { Layout } from "../components";
+import { TermsOfService as Terms } from "../types/home";
+import { ITermsResponse } from "../types/response";
+import { FetchTermServices } from "./api/home";
 
 export const getServerSideProps = async () => {
   const res: ITermsResponse<Terms[]> = await FetchTermServices();

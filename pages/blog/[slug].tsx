@@ -1,14 +1,14 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable padded-blocks */
-import { GetServerSidePropsContext, NextPage } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
-import { Layout } from '../../components';
-import { IBlogProps } from '../../types/blog';
-import { IPostResponse, IPostsResponse } from '../../types/response';
-import { FetchPostService, FetchPostsService } from '../api/posts';
+import { GetServerSidePropsContext, NextPage } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import ReactHtmlParser from "react-html-parser";
+import { Layout } from "../../components";
+import { IBlogProps } from "../../types/blog";
+import { IPostResponse, IPostsResponse } from "../../types/response";
+import { FetchPostService, FetchPostsService } from "../api/posts";
 
 interface Props {
   post: IBlogProps;
@@ -100,7 +100,7 @@ const Slug: NextPage<Props> = ({ post, similar }: Props) => {
                     <div className="primary my-3">
                       <Link
                         href={{
-                          pathname: '/blog/[slug]',
+                          pathname: "/blog/[slug]",
                           query: {
                             slug: el.slug,
                           },
@@ -118,7 +118,7 @@ const Slug: NextPage<Props> = ({ post, similar }: Props) => {
             <h1 className="primary">
               <Link
                 href={{
-                  pathname: '/blog/[slug]',
+                  pathname: "/blog/[slug]",
                   query: {
                     slug: similar.find(
                       (el: IBlogProps) => el.slug !== post.slug,

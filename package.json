@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "PORT=9009 next start",
-    "lint": "next lint",
+    "lint": "next lint --fix",
     "test:cov": "react-scripts test --watchAll=false --coverage",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx}\" \"!node_modules/**/*.{js,jsx,ts,tsx}\" \"!.next/**/*.{js,jsx,ts,tsx}\" \"!coverage/**/*.{js,jsx,ts,tsx}\""
   },

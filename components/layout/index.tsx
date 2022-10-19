@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import React from 'react';
-import Nav from '../nav';
-import Footer from '../page-sections/footer';
-import Schedule from '../page-sections/schedule';
-import { StyledLayout } from './styled';
+import Head from "next/head";
+import React from "react";
+import Nav from "../nav";
+import Footer from "../page-sections/footer";
+import Schedule from "../page-sections/schedule";
+import { StyledLayout } from "./styled";
 
 interface LayoutProps {
   pagename: string;

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const Hero = () => {
-  const [email, setEmail] = React.useState<string>('');
+  const [email, setEmail] = React.useState<string>("");
 
   const handleGetStarted = () => {
     if (!email) {
@@ -15,10 +15,10 @@ const Hero = () => {
       <div className="container d-xl-flex d-md-block d-sm-block gap-5 h-100 w-100 justify-content-between">
         <div className="col-lg-5 col-md-10 col-sm-12 mt-5 pt-5">
           <h1 className="display-4 mt-5 fw-normal primary">
-            Move money{' '}
+            Move money{" "}
             <span className="secondary-outline">
               across different countries
-            </span>{' '}
+            </span>{" "}
             swiftly &amp; securely.
           </h1>
         </div>
