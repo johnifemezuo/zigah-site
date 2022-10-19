@@ -9,7 +9,8 @@ export declare const process: {
   };
 };
 
-const cms_url = 'https://api-eu-west-2.graphcms.com/v2/cl3vhs4qrf6et01xk6knydxwq/master';
+const cms_url =
+  'https://api-eu-west-2.graphcms.com/v2/cl3vhs4qrf6et01xk6knydxwq/master';
 
 const mailchimpUrl =
   'https://zigah.us11.list-manage.com/subscribe/post?u=d3a42abf9499e3c35ab69653d&amp;id=45ad34ce81';

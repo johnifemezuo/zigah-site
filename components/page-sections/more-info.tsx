@@ -5,7 +5,9 @@ const MoreInfo = () => (
     <div className="container">
       <div className="my-5">
         <div className="text-center">
-          <small className="secondary help-business-btw">WE BUILT THIS FOR YOU</small>
+          <small className="secondary help-business-btw">
+            WE BUILT THIS FOR YOU
+          </small>
           <h1 className="text-light fw-bold mt-2 mb-3">
             Here&apos;s how ziga
             <span style={{ fontWeight: '100' }}>&trade;</span>

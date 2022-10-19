@@ -85,7 +85,11 @@ const StoryOne: FC<StoryOneSectionProps> = ({
     </div>
 
     <div className="story-one-blob">
-      <img src="/assets/swirly.png" alt="swirly" style={{ maxWidth: '350px' }} />
+      <img
+        src="/assets/swirly.png"
+        alt="swirly"
+        style={{ maxWidth: '350px' }}
+      />
     </div>
   </section>
 );
