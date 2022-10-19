@@ -1,0 +1,46 @@
+trigger:
+  - staging
+
+pool:
+  inputs:
+    pollingTimeoutSec: '300'
+  vmImage: ubuntu-latest
+
+steps:
+  # Setup NodeJS environment
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '16.x'
+    displayName: 'Setup NodeJS Environment'
+
+  # Install Dependencies
+  - script: |
+      rm -rf node_modules && yarn install --frozen-lockfile
+    displayName: 'Install Dependencies'
+
+  # Build Service
+  - script: |
+      yarn build
+    displayName: 'Build Service'
+
+  # Prune dev dependencies
+  - script: |
+      yarn install --production --ignore-scripts --prefer-offline
+    workingDirectory: $(System.DefaultWorkingDirectory)
+    displayName: "Prune dev dependencies"
+
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+      includeRootFolder: false
+      archiveType: 'zip'
+      archiveFile: '$(System.DefaultWorkingDirectory)/$(account_service_archive)$(Build.BuildId).zip'
+      replaceExistingArchive: true
+    displayName: 'Archive Artifacts'
+  
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(System.DefaultWorkingDirectory)/$(account_service_archive)$(Build.BuildId).zip'
+      ArtifactName: $(account_service_artifact)
+      publishLocation: 'Container'
+    displayName: 'Publish Artifacts'
