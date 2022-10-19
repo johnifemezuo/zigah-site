@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { FC } from 'react';
-import { IBlogProps } from '../../types/blog';
+import Image from "next/image";
+import Link from "next/link";
+import React, { FC } from "react";
+import { IBlogProps } from "../../types/blog";
 
 interface BlogSectionProps {
   blogs: IBlogProps[];
@@ -43,7 +43,7 @@ const Blog: FC<BlogSectionProps> = ({ blogs }: BlogSectionProps) => (
             </div>
             <div className="primary my-3">
               <Link
-                href={{ pathname: '/blog/[slug]', query: { slug: el.slug } }}
+                href={{ pathname: "/blog/[slug]", query: { slug: el.slug } }}
               >
                 <a>Read Article</a>
               </Link>

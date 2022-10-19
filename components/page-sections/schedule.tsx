@@ -1,8 +1,8 @@
-import emailjs from '@emailjs/browser';
-import React, { useRef, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import toast, { Toaster } from 'react-hot-toast';
-import { MAILJS_API } from '../../utils/api/apis';
+import emailjs from "@emailjs/browser";
+import React, { useRef, useState } from "react";
+import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
+import { MAILJS_API } from "../../utils/api/apis";
 
 const Schedule = () => {
   const form: any = useRef();
@@ -16,8 +16,8 @@ const Schedule = () => {
 
     await emailjs
       .sendForm(
-        'service_phnldni',
-        'template_r4ujuxl',
+        "service_phnldni",
+        "template_r4ujuxl",
         form.current,
         `${MAILJS_API}`,
       )
@@ -25,11 +25,11 @@ const Schedule = () => {
         (result) => {
           if (result.status === 200) {
             toast.success(
-              'Request Successfully sent, We will get back to you via email ',
+              "Request Successfully sent, We will get back to you via email ",
               {
                 duration: 3000,
-                position: 'top-center',
-                className: 'text-sm md:text-base',
+                position: "top-center",
+                className: "text-sm md:text-base",
               },
             );
             setLoading(false);
@@ -37,9 +37,9 @@ const Schedule = () => {
           }
         },
         (error) => {
-          toast.error(`${error || 'Sorry, Something went wrong'}`, {
+          toast.error(`${error || "Sorry, Something went wrong"}`, {
             duration: 4000,
-            position: 'top-center',
+            position: "top-center",
           });
           setLoading(false);
         },
@@ -62,8 +62,8 @@ const Schedule = () => {
                 className="form-control inputs mb-3 bg-transparent border-bottom-secondary-input"
                 placeholder="Type here"
                 name="name"
-                {...(register('name'),
-                { required: 'name is required, Thank you' })}
+                {...(register("name"),
+                { required: "name is required, Thank you" })}
                 required
               />
             </span>
@@ -72,7 +72,7 @@ const Schedule = () => {
             </span>
             <select
               className="form-control inputs bg-transparent border-bottom-secondary-input"
-              {...register('message')}
+              {...register("message")}
               required
             >
               <option>Make Inquiry</option>
@@ -88,7 +88,7 @@ const Schedule = () => {
               className="col-lg-4 inputs col-md-12 col-sm-12 w-auto form-control bg-transparent border-bottom-secondary-input"
               name="email"
               placeholder="Type email here"
-              {...(register('email'), { required: 'email is required' })}
+              {...(register("email"), { required: "email is required" })}
               required
             />
           </h2>

@@ -1,7 +1,7 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import Link from 'next/link';
-import React from 'react';
-import { StyledNavMenu } from './styled';
+/* eslint-disable react/jsx-closing-bracket-location */
+import Link from "next/link";
+import React from "react";
+import { StyledNavMenu } from "./styled";
 
 const NavBar = () => (
   <div className="w-100 py-4 bg-tranparent">
@@ -23,8 +23,8 @@ const NavBar = () => (
         <div className="d-lg-block d-md-block d-none">
           <Link href="https://app.zigah.co/auth/login" passHref>
             <a
-              style={{ fontSize: '0.92rem' }}
-            >
+              href="https://app.zigah.co/auth/login"
+              style={{ fontSize: "0.92rem" }}>
               Sign into your account
             </a>
           </Link>

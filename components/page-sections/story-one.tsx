@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import React, { FC } from 'react';
-import ReactHtmlParser from 'react-html-parser';
-import { StoryOne as IStoryOne } from '../../types/stories';
+import Image from "next/image";
+import React, { FC } from "react";
+import ReactHtmlParser from "react-html-parser";
+import { StoryOne as IStoryOne } from "../../types/stories";
 
 interface StoryOneSectionProps {
   storyOnes: IStoryOne[];
@@ -25,13 +25,13 @@ const StoryOne: FC<StoryOneSectionProps> = ({
           </div>
           <small
             className="secondary mb-3 divider-btw"
-            style={{ fontWeight: '400', fontSize: '0.85rem' }}
+            style={{ fontWeight: "400", fontSize: "0.85rem" }}
           >
             WE BUILT THIS FOR YOU
           </small>
           <h2 className="fw-bold primary mb-5">
             Who is ziga
-            <span style={{ fontWeight: '200' }}> &trade; </span>
+            <span style={{ fontWeight: "200" }}> &trade; </span>
             for?
           </h2>
         </div>
@@ -54,7 +54,7 @@ const StoryOne: FC<StoryOneSectionProps> = ({
               {storyOnes[0].title}
             </h1>
             <small className="secondary">{storyOnes[0].description}</small>
-            <div className="mb-4" style={{ maxWidth: '400px' }}>
+            <div className="mb-4" style={{ maxWidth: "400px" }}>
               <hr />
             </div>
             <div className="d-lg-flex d-sm-block align-items-start gap-5 mt-2 mb-3">
@@ -85,7 +85,11 @@ const StoryOne: FC<StoryOneSectionProps> = ({
     </div>
 
     <div className="story-one-blob">
-      <img src="/assets/swirly.png" alt="swirly" style={{ maxWidth: '350px' }} />
+      <img
+        src="/assets/swirly.png"
+        alt="swirly"
+        style={{ maxWidth: "350px" }}
+      />
     </div>
   </section>
 );

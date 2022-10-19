@@ -1,16 +1,17 @@
+/* eslint-disable react/jsx-indent */
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/prop-types */
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 import MailchimpSubscribe, {
   EmailFormFields,
   FormHooks,
-} from 'react-mailchimp-subscribe';
-import { mailchimpUrl } from '../../pages/api/service';
+} from "react-mailchimp-subscribe";
+import { mailchimpUrl } from "../../pages/api/service";
 
 const Footer = () => {
   const MAILCHIMP_URL = mailchimpUrl;
-  const [email, setEmail] = React.useState<string>('');
+  const [email, setEmail] = React.useState<string>("");
 
   const createFormData = (): EmailFormFields => {
     const Data = { EMAIL: email };
@@ -37,8 +38,8 @@ const Footer = () => {
                   status,
                   message,
                 }: FormHooks<EmailFormFields> = props;
-                if (status === 'sending') {
-                  setEmail('');
+                if (status === "sending") {
+                  setEmail("");
                 }
                 return (
                   <form
@@ -64,7 +65,7 @@ const Footer = () => {
                       <div>
                         <small>{status}</small>
                         <small>
-                          :<>{message}</>
+                        :<>{message}</>
                         </small>
                       </div>
                     )}

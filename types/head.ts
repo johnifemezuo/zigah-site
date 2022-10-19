@@ -1,3 +1,3 @@
 export interface IHead {
-    title?: string;
+  title?: string;
 }

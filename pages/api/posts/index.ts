@@ -1,7 +1,7 @@
-import { IBlogProps } from '../../../types/blog';
-import { IPostResponse, IPostsResponse } from '../../../types/response';
-import GraphCMSCLient from '../service';
-import { Post, Posts } from './queries';
+import { IBlogProps } from "../../../types/blog";
+import { IPostResponse, IPostsResponse } from "../../../types/response";
+import GraphCMSCLient from "../service";
+import { Post, Posts } from "./queries";
 
 const FetchPostsService = async (params?: {}) => {
   const variable = params;
