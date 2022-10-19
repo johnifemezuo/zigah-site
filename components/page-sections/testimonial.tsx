@@ -20,7 +20,7 @@ const Testimonial: FC<TestimonialSectionProps> = ({
         <div className="d-xl-flex d-md-flex d-sm-block align-items-start gap-5 mt-2 mb-5 overflow-scroll">
           {testimonials.map((el: ITestimonial, index: number) => (
             <div
-              key={index + Math.random()}
+              key={index}
               className="card bg-warning bg-opacity-10 border-2 col-sm-4 mt-4 line-height p-4 primary rounded rounded-3"
             >
               <div className="d-flex mt-3 mb-4">

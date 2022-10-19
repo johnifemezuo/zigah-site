@@ -21,8 +21,8 @@ const NavBar = () => (
       </div>
       <StyledNavMenu className="d-flex">
         <div className="d-lg-block d-md-block d-none">
-          <Link href={NEXT_PUBLIC_ZIGAH_APP_URL} passHref>
-            <a href={NEXT_PUBLIC_ZIGAH_APP_URL} style={{ fontSize: '0.92rem' }}>
+          <Link href={`${NEXT_PUBLIC_ZIGAH_APP_URL}`} passHref>
+            <a href={`${NEXT_PUBLIC_ZIGAH_APP_URL}`} style={{ fontSize: '0.92rem' }}>
               Sign into your account
             </a>
           </Link>

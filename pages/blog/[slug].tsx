@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable arrow-body-style */
 /* eslint-disable padded-blocks */
 import { GetServerSidePropsContext, NextPage } from 'next';
@@ -75,7 +76,7 @@ const Slug: NextPage<Props> = ({ post, similar }: Props) => {
                 similar.slice(0, 3).map((el: IBlogProps, index: number) => (
                   <div
                     className="card border-0 rounded-0 mb-3 bg-transparent"
-                    key={index + Math.random()}
+                    key={index}
                   >
                     <Image
                       className="border-bottom-secondary"
@@ -106,7 +107,7 @@ const Slug: NextPage<Props> = ({ post, similar }: Props) => {
                           },
                         }}
                       >
-                        Read Article
+                        <a>Read Article</a>
                       </Link>
                     </div>
                   </div>

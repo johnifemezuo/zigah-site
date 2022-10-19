@@ -7,8 +7,6 @@ body {
   margin: 0;
   background-color: #fffcf8 !important;
   overflow-y: visible !important;
-
-  
 }
 
 ::-webkit-scrollbar {
@@ -17,10 +15,9 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, .5);
-  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
-
 
 * {
   box-sizing: border-box;
@@ -60,7 +57,7 @@ p {
   height: 25px;
 }
 .lds-dual-ring:after {
-  content: " ";
+  content: ' ';
   display: block;
   width: 20px;
   height: 20px;
@@ -82,18 +79,18 @@ p {
   display: flex;
   align-content: space-between;
   align-items: center;
-  display: none;
 }
 
-.content-styles > p, ol {
-  font-size: 19px ;
+.content-styles > p,
+ol {
+  font-size: 19px;
 }
 .content-styles p > strong {
   font-size: 20px;
   font-weight: 500;
 }
 .content-styles p > a {
-  color: #FF00BB;
+  color: #ff00bb;
 }
 
 .primary-outline {
@@ -153,7 +150,7 @@ p {
 
 a {
   text-decoration: none !important;
-  color: #FF00BB !important;
+  color: #ff00bb !important;
 }
 
 .heading-line-height {
@@ -236,13 +233,11 @@ input:focus,
   left: 30%;
 }
 
-
-
 .second-story-spiral {
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 80px
+  max-width: 80px;
 }
 
 .second-story-blob {
@@ -256,8 +251,8 @@ input:focus,
 
 .divider-btw:before,
 .divider-btw:after {
-  background-color: #FF00BB;
-  content: "";
+  background-color: #ff00bb;
+  content: '';
   display: inline-block;
   height: 1px;
   position: relative;
@@ -275,11 +270,10 @@ input:focus,
   margin-right: -50%;
 }
 
-
 .help-business-btw:before,
 .help-business-btw:after {
-  background-color: #FF00BB;
-  content: "";
+  background-color: #ff00bb;
+  content: '';
   display: inline-block;
   height: 1px;
   position: relative;
@@ -297,26 +291,24 @@ input:focus,
   margin-right: -50%;
 }
 
-
-
- .story-one-blob {
-    position: absolute;
-    top: 35%;
-    left: 0;
-  }
+.story-one-blob {
+  position: absolute;
+  top: 35%;
+  left: 0;
+}
 @media only screen and (max-width: 600px) {
   .hero {
     background: #fefefe !important;
   }
 
- .story-one-blob {
-  display: none;
-}
+  .story-one-blob {
+    display: none;
+  }
 
   .second-story-blob {
     position: absolute;
     left: 0;
-    top: 80%
+    top: 80%;
   }
 
   .quote-text {

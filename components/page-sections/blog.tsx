@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { FC } from 'react';
@@ -20,7 +21,7 @@ const Blog: FC<BlogSectionProps> = ({ blogs }: BlogSectionProps) => (
         {blogs.map((el: IBlogProps, index: number) => (
           <div
             className="col-xl-4 col-lg-4 col-md-4 col-sm-12 card border-0 rounded-0 mb-3 bg-transparent"
-            key={index + Math.random()}
+            key={index}
           >
             <Image
               className="border-bottom-secondary"
@@ -44,7 +45,7 @@ const Blog: FC<BlogSectionProps> = ({ blogs }: BlogSectionProps) => (
               <Link
                 href={{ pathname: '/blog/[slug]', query: { slug: el.slug } }}
               >
-                Read Article
+                <a>Read Article</a>
               </Link>
             </div>
           </div>

@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-curly-brace-presence */
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/prop-types */
 import Link from 'next/link';
 import React from 'react';
@@ -64,8 +64,7 @@ const Footer = () => {
                       <div>
                         <small>{status}</small>
                         <small>
-                          {':'}
-                          <>{message}</>
+                          :<>{message}</>
                         </small>
                       </div>
                     )}
@@ -79,13 +78,19 @@ const Footer = () => {
             <div className="primary">
               <div className="fw-bold">Sitemap</div>
               <div className="my-1">
-                <Link href="/">Home</Link>
+                <Link href="/" passHref>
+                  <a href="/">Home</a>
+                </Link>
               </div>
               <div className="my-1">
-                <Link href="/terms-of-service">Terms of use</Link>
+                <Link href="/terms-of-service" passHref>
+                  <a href="/terms-of-service">Terms of use</a>
+                </Link>
               </div>
               <div className="my-1">
-                <Link href="/privacy-policy">Privacy Policy</Link>
+                <Link href="/privacy-policy" passHref>
+                  <a href="/privacy-policy">Privacy Policy</a>
+                </Link>
               </div>
             </div>
           </div>
