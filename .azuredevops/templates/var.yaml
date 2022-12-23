@@ -1,6 +1,6 @@
 variables:
   - name: 'Project.Name'
-    value: 'notification-service'
+    value: 'zigah-website'
   - name: 'Artifact.Name'
     value: '$(Project.Name)-artifact'
   - name: 'Archive.Name'
