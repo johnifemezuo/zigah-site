@@ -12,12 +12,12 @@ stages:
       - task: CmdLine@2
         displayName: Create .env File and Inject environment variables
         inputs:
-        script: |
-          touch .env
+          script: |
+            touch .env
 
-          echo NEXT_PUBLIC_ZIGAH_APP_URL=$(API_BASE_URL) >> .env
+            echo NEXT_PUBLIC_ZIGAH_APP_URL=$(API_BASE_URL) >> .env
 
-          echo NEXT_PUBLIC_MAILJS_API=XU9m7mOAdmW1CJnIM >> .env
+            echo NEXT_PUBLIC_MAILJS_API=XU9m7mOAdmW1CJnIM >> .env
       - task: Docker@2
         displayName: Build and push an image to container registry
         inputs:
