@@ -1,4 +1,5 @@
 import React from "react";
+import { NEXT_PUBLIC_ZIGAH_APP_URL } from "../../utils/api/apis";
 
 const HelpingBusiness = () => (
   <div className="my-5 py-5">
@@ -13,7 +14,7 @@ const HelpingBusiness = () => (
                 Businesses around the world would rather be paid in dollars or
                 their local currency
               </h1>
-              <a href="https://app.zigah.co/auth/sign-up">
+              <a href={`${NEXT_PUBLIC_ZIGAH_APP_URL}/auth/sign-up`}>
                 <button className="btn btn-light primary mt-3" type="button">
                   Get Started
                 </button>

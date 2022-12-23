@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { StyledNavMenu } from "./styled";
+import { NEXT_PUBLIC_ZIGAH_APP_URL } from "../../utils/api/apis";
 
 const NavBar = () => (
   <div className="w-100 py-4 bg-tranparent">
@@ -21,16 +22,16 @@ const NavBar = () => (
       </div>
       <StyledNavMenu className="d-flex">
         <div className="d-lg-block d-md-block d-none">
-          <Link href="https://app.zigah.co/auth/login" passHref>
+          <Link href={`${NEXT_PUBLIC_ZIGAH_APP_URL}/auth/login`} passHref>
             <a
-              href="https://app.zigah.co/auth/login"
+              href={`${NEXT_PUBLIC_ZIGAH_APP_URL}/auth/login`}
               style={{ fontSize: "0.92rem" }}>
               Sign into your account
             </a>
           </Link>
         </div>
 
-        <a href="https://app.zigah.co/auth/sign-up">
+        <a href={`${NEXT_PUBLIC_ZIGAH_APP_URL}/auth/sign-up`}>
           <button className="btn btn-primary" type="button">
             Get Started
           </button>

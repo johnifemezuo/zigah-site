@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import Image from "next/image";
 import { Testimonial as ITestimonial } from "../../types/home";
+import { NEXT_PUBLIC_ZIGAH_APP_URL } from "../../utils/api/apis";
 
 interface TestimonialSectionProps {
   testimonials: ITestimonial[];
@@ -69,7 +70,7 @@ const Testimonial: FC<TestimonialSectionProps> = ({
               Create and account and get access to foreign currencies from all
               over the world.
             </div>
-            <a href="https://app.zigah.co/auth/sign-up">
+            <a href={`${NEXT_PUBLIC_ZIGAH_APP_URL}/auth/sign-up`}>
               <button className="btn btn-light primary mt-3" type="button">
                 Get Started
               </button>
