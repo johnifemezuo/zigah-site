@@ -1,0 +1,31 @@
+nameOverride: ""
+fullNameOverride: ""
+serviceAccount:
+  name: ""
+  create: false
+
+app:
+  name: "zigah-website"
+  env: staging
+
+  secret:
+    name: zigah-website-secrets
+
+  labels:
+    tier: frontend
+    role: website
+
+  volume:
+    secret:
+      name: "secret-volume"
+
+  image:
+    registry: "zigah.azurecr.io"
+    repository: "zigah-website"
+    nameSpace: staging
+    tag: latest
+
+  container:
+    port: 9128
+    portName: container-port
+  replicas: 1
