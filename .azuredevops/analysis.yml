@@ -12,7 +12,7 @@ steps:
   - task: SonarQubePrepare@5
     displayName: Prepare SonarQube
     inputs:
-      SonarQube: 'Analyze "notification-service"'
+      SonarQube: 'Analyze "zigah-website-v2"'
       scannerMode: 'CLI'
       configMode: 'manual'
       cliProjectKey: $(sonarqubeProjectKey)
