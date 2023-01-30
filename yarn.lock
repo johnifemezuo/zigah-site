@@ -3683,6 +3683,11 @@ react-hot-toast@^2.2.0:
   dependencies:
     goober "^2.1.1"
 
+react-hotjar@^5.4.1:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/react-hotjar/-/react-hotjar-5.4.1.tgz#9729e30c57a5a01417f46f578791e6ad1e7cb869"
+  integrity sha512-2205ONuPZzAFAQaIG2BQf/l8nePf5ir16vF7S/RT937JYvw3c7WSH65XRnL3sT4GMpU4eDzesB964xNE5wjGPQ==
+
 react-html-parser@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/react-html-parser/-/react-html-parser-2.0.2.tgz#6dbe1ddd2cebc1b34ca15215158021db5fc5685e"
