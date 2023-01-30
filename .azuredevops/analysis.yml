@@ -1,4 +1,5 @@
-trigger:
+trigger: none
+pr:
   - dev
 
 pool:
@@ -9,6 +10,7 @@ pool:
 steps:
   # Prepare SonarQube Analysis Configuration
   - task: SonarQubePrepare@5
+    displayName: Prepare SonarQube
     inputs:
       SonarQube: 'Analyze "zigah-website-v2"'
       scannerMode: 'CLI'
@@ -17,7 +19,6 @@ steps:
       cliSources: '.'
       extraProperties: |
         sonar.javascript.lcov.reportPaths=./coverage/lcov.info
-    displayName: 'Prepare SonarQube Scanner'
 
   # Setup NodeJS environment
   - task: NodeTool@0

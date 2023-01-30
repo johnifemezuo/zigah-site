@@ -1,4 +1,5 @@
 import React from "react";
+import { NEXT_PUBLIC_ZIGAH_APP_URL } from "../../utils/api/apis";
 
 const Hero = () => {
   const [email, setEmail] = React.useState<string>("");
@@ -7,7 +8,7 @@ const Hero = () => {
     if (!email) {
       return;
     }
-    window.location.replace(`https://app.zigah.co/auth/sign-up?email=${email}`);
+    window.location.replace(`${NEXT_PUBLIC_ZIGAH_APP_URL}/auth/sign-up?email=${email}`);
   };
 
   return (
