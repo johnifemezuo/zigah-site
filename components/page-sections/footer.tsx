@@ -99,7 +99,7 @@ const Footer = () => {
           <div className="col-sm-10 col-md-10 col-lg-2 mb-5">
             <div className="primary">
               <div className="fw-bold">Reach Us</div>
-              <div className="my-1">connect@ziga.co</div>
+              <div className="my-1">connect@zigah.co</div>
               <div className="my-1">+234 812 334 288</div>
             </div>
           </div>

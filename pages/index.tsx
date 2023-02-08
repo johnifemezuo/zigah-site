@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import React from "react";
 import { Layout } from "../components";
-import Blog from "../components/page-sections/blog";
+// import Blog from "../components/page-sections/blog";
 import HelpingBusiness from "../components/page-sections/helping-business";
 import Hero from "../components/page-sections/hero";
 import MoreInfo from "../components/page-sections/more-info";
@@ -26,7 +26,7 @@ import {
 import { FetchPostsService } from "./api/posts";
 
 interface HomePageProps {
-  blogs: IBlogProps[];
+  // blogs: IBlogProps[];
   storyOne: IStoryOne[];
   storyTwo: IStoryTwo[];
   testimonials: TestimonialType[];
@@ -52,7 +52,7 @@ export const getServerSideProps = async () => {
 };
 
 const Home: NextPage<HomePageProps> = ({
-  blogs,
+  // blogs,
   storyOne,
   storyTwo,
   testimonials,
@@ -67,7 +67,7 @@ const Home: NextPage<HomePageProps> = ({
     {testimonials && testimonials.length > 0 && (
       <Testimonial testimonials={testimonials} />
     )}
-    <Blog blogs={blogs} />
+    {/* <Blog blogs={blogs} /> */}
   </Layout>
 );
 

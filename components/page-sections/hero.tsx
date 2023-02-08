@@ -43,6 +43,7 @@ const Hero = () => {
                   placeholder="Enter your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  type="email"
                 />
                 <button
                   className="col-5 btn btn-primary get-started-button"

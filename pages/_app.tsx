@@ -6,7 +6,9 @@ import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
-    hotjar.initialize(3343663, 6);
+    if (typeof window !== "undefined") {
+      hotjar.initialize(3343663, 6);
+    }
   }, []);
 
   return <Component {...pageProps} />;
