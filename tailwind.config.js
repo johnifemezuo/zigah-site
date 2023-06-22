@@ -9,8 +9,31 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // brand
+        "primary-blue": "#000a4a",
+        "primary-blue-hover": "#051268",
+
+        "primary-magenta": "#ff00bb",
+        "primary-orange": "#FF6E00",
+        "primary-cyan": "#00CCFF",
+        "light-gray": "#EBF3FB",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat", "ubuntu"],
+        oswald: ["Oswald", "san-serif"],
+        sourceSerif: ["Source Serif Pro", "serif"],
+      },
+      screens: {
+        "2xl": "1380px",
+        "3xl": "1550px",
+        "4xl": "1770px",
+        "5xl": "1870px",
+      },
+    },
   },
-  plugins: [],
+  // eslint-disable-next-line no-undef
+  plugins: [require("@tailwindcss/typography")],
 };
 

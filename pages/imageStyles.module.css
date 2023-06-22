@@ -1,0 +1,16 @@
+.imgWrapper {
+    opacity: 1;
+    position: relative;
+    display: block;
+}
+
+.imgWrapper > img {
+    display: none;
+}
+
+.imgs {
+    display: none;
+    object-fit: cover;
+    background-position: top;
+}
+

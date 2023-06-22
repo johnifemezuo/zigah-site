@@ -1,74 +1,73 @@
 import type { NextPage } from "next";
+import Head from "next/head";
+import GetStarted from "../components/Pages/homepage/GetStarted/GetStarted";
+import HeroSection from "../components/Pages/homepage/HeroSection/HeroSection";
+import TrustedBy from "../components/Pages/homepage/TrustedBy/TrustedBy";
 import React from "react";
-import { Layout } from "../components";
-// import Blog from "../components/page-sections/blog";
-import HelpingBusiness from "../components/page-sections/helping-business";
-import Hero from "../components/page-sections/hero";
-import MoreInfo from "../components/page-sections/more-info";
-import Quote from "../components/page-sections/quote";
-import StoryOne from "../components/page-sections/story-one";
-import StoryTwo from "../components/page-sections/story-two";
-import Testimonial from "../components/page-sections/testimonial";
-import { IBlogProps } from "../types/blog";
-import { Testimonial as TestimonialType } from "../types/home";
-import {
-  IPostsResponse,
-  IStoryOneResponse,
-  IStoryTwoResponse,
-  ITestimonialResponse,
-} from "../types/response";
-import { StoryOne as IStoryOne, StoryTwo as IStoryTwo } from "../types/stories";
-import {
-  FetchStoryOneServices,
-  FetchStoryTwoServices,
-  FetchTestimonialsServices,
-} from "./api/home";
-import { FetchPostsService } from "./api/posts";
+import SectionThree from "../components/Pages/homepage/SectionThree/SectionThree";
+import { SectionFour } from "../components/Pages/homepage/SectionFour/SectionFour";
+import { SectionFive } from "../components/Pages/homepage/SectionFive  /SectionFive";
+import { SectionSix } from "../components/Pages/homepage/SectionSix/SectionSix";
+import GetInTouch from "../components/Pages/homepage/GetInTouch/GetInTouch";
+import { CustomerReviews } from "../components/Pages/homepage/CustomerReviews/CustomerReviews";
+import { HOME_QUERY, USER_REVIEW } from "../base/query/graphql-queries";
+import { useQuery } from "@apollo/client";
+import { IHomePage } from "../base/interface/graph.interface";
+import { PageLoading } from "../components/Global/Loading/PageLoading";
+import ZigahNotBank from "../components/Pages/homepage/ZigahNotBank/ZigahNotBank";
 
-interface HomePageProps {
-  // blogs: IBlogProps[];
-  storyOne: IStoryOne[];
-  storyTwo: IStoryTwo[];
-  testimonials: TestimonialType[];
-}
 
-export const getServerSideProps = async () => {
-  const BlogRes: IPostsResponse<IBlogProps[]> = await FetchPostsService();
-  const StoryOneRes: IStoryOneResponse<IStoryOne[]> =
-    await FetchStoryOneServices();
-  const StoryTwoRes: IStoryTwoResponse<IStoryTwo[]> =
-    await FetchStoryTwoServices();
-  const TestimonialRes: ITestimonialResponse<TestimonialType[]> =
-    await FetchTestimonialsServices();
+const HomeIndex: NextPage = () => {
 
-  return {
-    props: {
-      blogs: BlogRes.blogs,
-      storyOne: StoryOneRes.storyOnes,
-      storyTwo: StoryTwoRes.storyTwos,
-      testimonials: TestimonialRes.testimonials,
-    },
-  };
+  const { data, loading } = useQuery(HOME_QUERY);
+  const { data:userReview, loading:isLoading } = useQuery(USER_REVIEW);
+  const homeInfo = data?.homepages[0] as IHomePage;
+  const allLoading = loading || isLoading;
+
+  return (
+    <>
+      <Head>
+        <title>Zigah | Welcome</title>
+      </Head>
+
+      {allLoading ? (
+        <PageLoading />
+      ) : (
+        <div>
+          <HeroSection desc={homeInfo?.heroDescription} />
+          <TrustedBy title={homeInfo?.sectionOneTItle} desc={homeInfo?.sectionOneDesc} />
+          <GetStarted
+            title={homeInfo?.sectionTwoTitle}
+            desc={homeInfo?.sectionTwoDesc}
+            subTitle={homeInfo?.sectionTwoSubTitle}
+          />
+          <SectionThree title={homeInfo?.sectionThreeTitle} desc={homeInfo?.sectionThreeDesc} />
+
+            {/* <ZigahNotBank /> */}
+            
+          {/* <SectionFour
+            title={homeInfo?.sectionFourTitle}
+            desc={homeInfo?.sectionFourDesc}
+            imgOne={homeInfo?.sectionFourImageOne?.url}
+            imgTwo={homeInfo?.sectionFourImageTwo?.url}
+          /> */}
+          <SectionFive title={homeInfo?.sectionFiveTitle} desc={homeInfo?.sectionFiveDesc} />
+          <SectionSix
+            subTitle={homeInfo?.sectionSixSubTitle}
+            title={homeInfo?.sectionSixTitle}
+            features={homeInfo?.productFeatures}
+          />
+          {/* <UserStory userStory={userStory}/>
+      <HowWeHelpSection moreInfo={homeInfo} />
+      <MoreInfo moreInfo={homeInfo} />
+      <InsightSection blogData={blog} />*/}
+          <CustomerReviews reviews={userReview} />
+          <GetInTouch />
+        </div>
+      )}
+    </>
+  );
 };
 
-const Home: NextPage<HomePageProps> = ({
-  // blogs,
-  storyOne,
-  storyTwo,
-  testimonials,
-}: HomePageProps) => (
-  <Layout pagename="Ziga | Home">
-    <Hero />
-    <Quote />
-    <StoryOne storyOnes={storyOne} />
-    <StoryTwo storyTwo={storyTwo} />
-    <MoreInfo />
-    <HelpingBusiness />
-    {testimonials && testimonials.length > 0 && (
-      <Testimonial testimonials={testimonials} />
-    )}
-    {/* <Blog blogs={blogs} /> */}
-  </Layout>
-);
+export default HomeIndex;
 
-export default Home;
