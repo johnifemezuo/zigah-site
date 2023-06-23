@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 // import { yupResolver } from "@hookform/resolvers/yup";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import Container from "../../../layout/Container";
@@ -9,7 +9,6 @@ import FadIn from "../../../util/animation/FadIn";
 import { MAILJS_API } from "../../../util/api/apis";
 import Aurora from "../../Global/Aurora/Aurora";
 import Button from "../../Global/UI/Button/Button";
-import { bookSessionFormValidatorSchema } from "./bookSessionFormValidator";
 
 interface BookSessionPageI {
   fullName: string;
@@ -18,7 +17,7 @@ interface BookSessionPageI {
   message: string;
 }
 
-function BookSessionPage() {
+const BookSessionPage = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const form: any = useRef();
 
@@ -40,7 +39,7 @@ function BookSessionPage() {
         "service_phnldni",
         "template_r4ujuxl",
         form.current,
-        `${MAILJS_API}`
+        `${MAILJS_API}`,
       )
       .then(
         (result) => {
@@ -51,7 +50,7 @@ function BookSessionPage() {
                 duration: 3000,
                 position: "top-center",
                 className: "text-sm md:text-base",
-              }
+              },
             );
 
             setTimeout(() => window.location.reload(), 2000);
@@ -64,7 +63,7 @@ function BookSessionPage() {
             position: "top-center",
           });
           setLoading(false);
-        }
+        },
       );
   };
   return (
@@ -77,7 +76,7 @@ function BookSessionPage() {
                 Schedula a Metting.
               </h1>
             </FadIn>
-            <FadIn var1={{ x: 80 }} var2={{ x: 0 }} param={"+=0.4"}>
+            <FadIn var1={{ x: 80 }} var2={{ x: 0 }} param="+=0.4">
               <StyledLongText>
                 <span className="lg:w-[500px] inline-block">
                   Exchange and pay in your local currency, build financial
@@ -97,8 +96,7 @@ function BookSessionPage() {
               onSubmit={handleSubmit(submitForm)}
               ref={form}
               id="resetForm"
-              className="space-y-12"
-            >
+              className="space-y-12">
               <div className="lg:flex space-y-3 lg:space-y-0 lg:space-x-8">
                 <label className="lg:w-[700px] text-lg lg:text-2xl  font-medium">
                   Hey, my name is
@@ -130,8 +128,7 @@ function BookSessionPage() {
                   <select
                     className="border rounded-xl w-full bg-white border-gray-light px-3 lg:px-5 py-3 text-sm lg:text-base lg:py-4"
                     {...register("service")}
-                    required
-                  >
+                    required>
                     <option value="make Inquiry">Make Inquiry</option>
                     <option value="I have question">I have question</option>
                     <option value="talk business">Talk Business</option>
@@ -178,8 +175,7 @@ function BookSessionPage() {
 
               <Button
                 isLoading={false}
-                className="btn flex items-center btn-rounded-xl btn-primary "
-              >
+                className="btn flex items-center btn-rounded-xl btn-primary" >
                 {loading ? <span className="mr-3 lds-dual-ring" /> : null}
                 SCHEDULE SESSION
               </Button>
@@ -203,6 +199,6 @@ function BookSessionPage() {
       />
     </div>
   );
-}
+};
 
 export default BookSessionPage;

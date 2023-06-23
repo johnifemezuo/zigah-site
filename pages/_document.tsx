@@ -2,6 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 import React from "react";
 
+// eslint-disable-next-line no-underscore-dangle
 function _document() {
   return (
     <Html>
@@ -11,7 +12,7 @@ function _document() {
           content="Zigah Website"
         />
         <link rel="icon" type="image/png" href="img/tablogo4.png" />
-        
+
       </Head>
 
       <body>

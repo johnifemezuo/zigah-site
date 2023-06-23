@@ -1,9 +1,11 @@
+import { useQuery } from "@apollo/client";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import {
+  COMPANY_LOCATION,
+  COMPANY_SOCIALS,
+} from "../../../base/query/graphql-queries";
 import Container from "../../../layout/Container";
 import { StyledFollowIcons } from "../../../styles/styled-components/Styled-component";
-import FacebookIcon from "../Icons/svg/FacebookIcon";
 import InstagramIcon from "../Icons/svg/InstagramIcon";
 import LinkedIn from "../Icons/svg/LinkedIn";
 import TwitterIcon from "../Icons/svg/TwitterIcon";
@@ -11,8 +13,7 @@ import {
   StyledFooterHeader,
   StyledFooterLinks,
 } from "./style/StyledFooterElements";
-import { useQuery } from "@apollo/client";
-import { COMPANY_LOCATION, COMPANY_SOCIALS, HOME_QUERY } from "../../../base/query/graphql-queries";
+import { FacebookIcon } from "../Icons/svg/FacebookIcon";
 
 function Footer() {
   const { data } = useQuery(COMPANY_LOCATION);
@@ -29,11 +30,17 @@ function Footer() {
             <div className="mt-6  lg:mt-12 text-sm mg:text-base space-y-6">
               <StyledFooterHeader>Location</StyledFooterHeader>
               <div className="flex items-center space-x-3">
-                <img src={data?.locationAreas?.[0]?.iconImage?.url} className="rounded-full" />
+                <img
+                  src={data?.locationAreas?.[0]?.iconImage?.url}
+                  className="rounded-full"
+                />
                 <p>{data?.locationAreas?.[0]?.name}</p>
               </div>
               <div className="flex items-center space-x-3">
-                <img src={data?.locationAreas?.[1]?.iconImage?.url} className="" />
+                <img
+                  src={data?.locationAreas?.[1]?.iconImage?.url}
+                  className=""
+                />
                 <p>{data?.locationAreas?.[1]?.name}</p>
               </div>
             </div>
@@ -42,12 +49,18 @@ function Footer() {
           <div className="">
             <StyledFooterHeader>Information</StyledFooterHeader>
             <div className="grid">
-              <StyledFooterLinks href={`/dashboard`}>Dashboard</StyledFooterLinks>
-              <StyledFooterLinks href={`/about-us`}>About Us</StyledFooterLinks>
-              <StyledFooterLinks href={`/book-session`}>Book a session</StyledFooterLinks>
-              <StyledFooterLinks href={`/faq`}>Faq</StyledFooterLinks>
-              <StyledFooterLinks href={`/terms-of-use`}>Terms of Use </StyledFooterLinks>
-              <StyledFooterLinks href={`/privacy-policy`}>Privacy Policy </StyledFooterLinks>
+              <StyledFooterLinks href="/dashboard">Dashboard</StyledFooterLinks>
+              <StyledFooterLinks href="/about-us">About Us</StyledFooterLinks>
+              <StyledFooterLinks href="/book-session">
+                Book a session
+              </StyledFooterLinks>
+              <StyledFooterLinks href="/faq">Faq</StyledFooterLinks>
+              <StyledFooterLinks href="/terms-of-use">
+                Terms of Use{" "}
+              </StyledFooterLinks>
+              <StyledFooterLinks href="/privacy-policy">
+                Privacy Policy{" "}
+              </StyledFooterLinks>
             </div>
           </div>
 
@@ -55,25 +68,33 @@ function Footer() {
             <div className="">
               <StyledFooterHeader>Follow</StyledFooterHeader>
               <div className="space-x-4 mt-3 flex">
-                <StyledFollowIcons href={socials?.socials[2].link} target="_blank" rel="noreferrer">
+                <StyledFollowIcons
+                  href={socials?.socials[2].link}
+                  target="_blank"
+                  rel="noreferrer">
                   <LinkedIn />
                 </StyledFollowIcons>
 
-                <StyledFollowIcons href={socials?.socials[2].link} target="_blank" rel="noreferrer">
+                <StyledFollowIcons
+                  href={socials?.socials[2].link}
+                  target="_blank"
+                  rel="noreferrer">
                   <FacebookIcon />
                 </StyledFollowIcons>
 
-                  <StyledFollowIcons
-                    href={socials?.socials[2].link}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <TwitterIcon />
-                  </StyledFollowIcons>
+                <StyledFollowIcons
+                  href={socials?.socials[2].link}
+                  target="_blank"
+                  rel="noreferrer">
+                  <TwitterIcon />
+                </StyledFollowIcons>
 
-                  <StyledFollowIcons href={socials?.socials[2].link} target="_blank" rel="noreferrer">
-                    <InstagramIcon />
-                  </StyledFollowIcons>
+                <StyledFollowIcons
+                  href={socials?.socials[2].link}
+                  target="_blank"
+                  rel="noreferrer">
+                  <InstagramIcon />
+                </StyledFollowIcons>
               </div>
             </div>
 

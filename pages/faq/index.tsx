@@ -1,12 +1,11 @@
 import { useQuery } from "@apollo/client";
 import Head from "next/head";
 import { FAQS } from "../../base/query/graphql-queries";
-import Faq from "../../components/Pages/Faq/Faq";
-import React from "react";
 import { PageLoading } from "../../components/Global/Loading/PageLoading";
+import Faq from "../../components/Pages/Faq/Faq";
 
 function FaqIndex() {
-  const { data:faqs, loading } = useQuery(FAQS);
+  const { data: faqs, loading } = useQuery(FAQS);
 
   return (
     <div>

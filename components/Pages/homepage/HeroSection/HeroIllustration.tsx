@@ -1,7 +1,4 @@
-import gsap, { Power3 } from "gsap";
-import Image from "next/image";
-import React, { useRef } from "react";
-import { useIsomorphicLayoutEffect } from "../../../../util/animation/global";
+import { useRef } from "react";
 
 function HeroIllustration() {
   const bouncing = useRef(null);
@@ -48,7 +45,11 @@ function HeroIllustration() {
         className="w-[40px] lg:w-auto  absolute -left-5 -top-0 bg-transparent"
       />
 
-      <img src={`/img/globe-2.png`} alt="" className=" absolute left-28 top-12 bg-transparent" />
+      <img
+        src={`/img/globe-2.png`}
+        alt=""
+        className=" absolute left-28 top-12 bg-transparent"
+      />
 
       <img
         src={`/img/globe-3.png`}
@@ -65,7 +66,11 @@ function HeroIllustration() {
         alt=""
         className=" absolute right-[10%] top-12 bg-transparent hidden md:block"
       />
-      <img src={`/img/globe-6.png`} alt="" className=" absolute left-16 bottom-28 bg-transparent" />
+      <img
+        src={`/img/globe-6.png`}
+        alt=""
+        className=" absolute left-16 bottom-28 bg-transparent"
+      />
       {/* <div
         ref={bouncing}
         className="absolute right-0 top-0 w-[160px] lg:w-auto -mt-[6vh] -mr-[vh]"

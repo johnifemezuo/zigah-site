@@ -1,83 +1,26 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true,
-    "jest": true
-  },
-  "overrides": [
-    {
-      "files": [
-        "**/*.spec.js",
-        "**/*.spec.jsx"
-      ],
-      "env": {
-        "jest": true
-      }
-    }
-  ],
-  "extends": [
-    "plugin:react/recommended",
-    "plugin:@next/next/recommended",
-    "airbnb",
-    "eslint:recommended",
-    "next"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "plugins": [
-    "react",
-    "@typescript-eslint"
-  ],
+  "extends": ["next/core-web-vitals", "prettier"],
+  "plugins": ["prettier"],
   "rules": {
-    "linebreak-style": 0,
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".tsx"
-        ]
-      }
-    ],
-    "react/function-component-definition": [
-      2,
-      {
-        "namedComponents": "arrow-function"
-      }
-    ],
-    "import/no-unresolved": 0,
-    "import/extensions": 0,
-    "react/jsx-no-useless-fragment": 0,
-    "arrow-body-style": 1,
-    "object-curly-newline": 0,
-    "react/no-danger": 0,
-    "react/jsx-props-no-spreading": 0,
-    "react/no-array-index-key": 0,
-    "operator-linebreak": 0,
-    "import/prefer-default-export": 0,
-    "react/require-default-props": 0,
-    "implicit-arrow-linebreak": 0,
-    "import/no-extraneous-dependencies": [
+    "no-console": "warn",
+    "max-len": [
       "error",
       {
-        "devDependencies": true
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
       }
     ],
-    "quotes": [
-      2,
-      "double",
+    "prettier/prettier": [
+      "error",
       {
-        "avoidEscape": true
+        "printWidth": 120
+      },
+      {
+        "usePrettierrc": true
       }
-    ],
-    "react/jsx-one-expression-per-line": 0
+    ]
   }
 }

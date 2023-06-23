@@ -1,13 +1,11 @@
-import Head from "next/head";
-import React from "react";
-import Terms from "../../components/Pages/Terms/Terms";
 import { useQuery } from "@apollo/client";
+import Head from "next/head";
 import { TERMSOFUSE } from "../../base/query/graphql-queries";
 import { PageLoading } from "../../components/Global/Loading/PageLoading";
+import Terms from "../../components/Pages/Terms/Terms";
 
 function TermsIndex() {
   const { data, loading } = useQuery(TERMSOFUSE);
-
 
   return (
     <>
@@ -19,6 +17,5 @@ function TermsIndex() {
     </>
   );
 }
-
 
 export default TermsIndex;

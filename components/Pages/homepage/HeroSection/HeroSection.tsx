@@ -7,7 +7,7 @@ import Image from "next/image";
 
 function HeroSection({desc}: {desc: string}) {
   return (
-    <div className="lg:py-20 py-12 lg:mt-20  bg-[#F3F5FB] h-[820px] lg:h-screen relative overflow-hidden">
+    <div className="mt-16 lg:py-20 py-12 lg:mt-20  bg-[#F3F5FB] h-[820px] lg:h-screen relative overflow-hidden">
       <Container>
         <div className=" w-full bg-red">
           <div className=" lg:mt-12 mt-0 lg:max-w-[600px] px-4

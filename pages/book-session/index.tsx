@@ -1,5 +1,4 @@
 import Head from "next/head";
-import React from "react";
 import BookSessionPage from "../../components/Pages/BookSessionPage/BookSessionPage";
 
 function index() {
@@ -7,9 +6,9 @@ function index() {
     <>
       <Head>
         <title>Book Session</title>
-          </Head>
-          
-          <BookSessionPage/>
+      </Head>
+
+      <BookSessionPage />
     </>
   );
 }

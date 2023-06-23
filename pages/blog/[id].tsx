@@ -1,9 +1,4 @@
 /* eslint-disable react/prop-types */
-import { InferGetStaticPropsType } from "next";
-import Head from "next/head";
-import React from "react";
-import BlogRead from "../../components/Pages/Blog/BlogRead";
-import { ReadOnlyBlogInterface } from "../../util/interface/blogInterface";
 
 function ArticlePreview() {
   return (
@@ -13,9 +8,7 @@ function ArticlePreview() {
         <meta name="zigah articles" content={post.attributes.title} />
       </Head> */}
 
-      <div>
-        {/* <BlogRead pageData={post} allBlog={allBlog} /> */}
-      </div>
+      <div>{/* <BlogRead pageData={post} allBlog={allBlog} /> */}</div>
     </>
   );
 }

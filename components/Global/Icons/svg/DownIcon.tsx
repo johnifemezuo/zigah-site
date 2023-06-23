@@ -1,5 +1,3 @@
-import React from 'react'
-
 function DownIcon() {
   return (
     <svg
@@ -13,9 +11,9 @@ function DownIcon() {
         d="M4.5 6.5l3 3 3-3"
         stroke="currentColor"
         strokeLinecap="square"
-      ></path>
+      />
     </svg>
   );
 }
 
-export default DownIcon
+export default DownIcon;

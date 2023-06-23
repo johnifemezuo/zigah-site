@@ -1,9 +1,8 @@
 import Link from "next/link";
-import React from "react";
 import CopyLink from "../../Global/Icons/svg/CopyLink";
-import FacebookIcon from "../../Global/Icons/svg/FacebookIcon";
 import LinkedIn from "../../Global/Icons/svg/LinkedIn";
 import Twitter from "../../Global/Icons/svg/Twitter";
+import { FacebookIcon } from "../../Global/Icons/svg/FacebookIcon";
 
 function BlogSocials() {
   return (
@@ -11,32 +10,28 @@ function BlogSocials() {
       <Link href={"/"}>
         <a
           className="text-para hover:text-primary-magenta transitions"
-          target="_blank"
-        >
+          target="_blank">
           <Twitter />
         </a>
       </Link>
       <Link href={"/"}>
         <a
           className="text-para hover:text-primary-magenta transitions"
-          target="_blank"
-        >
+          target="_blank">
           <FacebookIcon />
         </a>
       </Link>
       <Link href={"/"}>
         <a
           className="text-para hover:text-primary-magenta transitions"
-          target="_blank"
-        >
+          target="_blank">
           <LinkedIn />
         </a>
       </Link>
       <Link href={"/"}>
         <a
           className="text-para hover:text-primary-magenta transitions"
-          target="_blank"
-        >
+          target="_blank">
           <CopyLink />
         </a>
       </Link>

@@ -1,5 +1,4 @@
 import { Disclosure } from "@headlessui/react";
-import React from "react";
 import { StyledLongText } from "../../../styles/styled-components/Styled-component";
 import DownIcon from "../Icons/svg/DownIcon";
 

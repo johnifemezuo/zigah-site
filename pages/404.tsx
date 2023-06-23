@@ -9,7 +9,7 @@ function PageNotFoundIndex() {
         <title>Page Not Found</title>{" "}
       </Head>
 
-      <PageNotFound/>
+      <PageNotFound />
     </>
   );
 }
