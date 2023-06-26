@@ -51,8 +51,7 @@ function TrustedBy({ title, desc }: { title: string;  desc: string}) {
   return (
     <div
       ref={element}
-      className="overflow-hidden pb-12 lg:pb-20 px-6 lg:px-0 lg:mt-44  bg-[#FDF0FF] 5xl:max-w-[1660px] 4xl:max-w-[1600px] 2xl:max-w-[1420px] mt-24 lg:rounded-2xl mx-auto"
-    >
+      className="overflow-hidden pb-12 lg:pb-20 px-6 lg:px-0 lg:mt-44  bg-[#FDF0FF] 5xl:max-w-[1660px] 4xl:max-w-[1600px] 2xl:max-w-[1420px] mt-24 lg:rounded-2xl mx-auto">
       <Container>
         <div className="text-center ">
           <img src="/img/bulb.png" className="-mt-7 w-12 lg:w-auto" />
@@ -61,20 +60,25 @@ function TrustedBy({ title, desc }: { title: string;  desc: string}) {
               <h1 className="leading-11 text-left  mt-9 lg:text-4xl text-2xl  text-[#1C224B] ">
                 {title}
               </h1>
-              <h1 className="  text-left lg:text-xl font-normal  leading-snug text-xl ">{desc}</h1>
+              <h1 className="  text-left lg:text-xl font-normal  leading-snug text-xl ">
+                {desc}
+              </h1>
             </div>
 
             <div className="grid gap-12 mt-8 lg:mt-0">
               <div className=" lg:text-xl pt-4 flex flex-col text-left gap-5 lg:gap-6 text-gray-800">
                 <div className="space-y-3">
-                  
                   <img src="img/veri.png" className="w-12 lg:w-14" />
 
-                  <p>We are Licensed by  MSB (Money services business) Canada</p>
+                  <p>We are Licensed by MSB (Money services business) Canada</p>
                 </div>
                 <div className="space-y-3 border-t  pt-4 lg:pt-8 border-zinc-400">
                   <MdLockPerson className="text-5xl  text-zinc-700" />
-                  <p>We protect your details through strict standards</p>
+                  <p>
+                    Zigah is registered as a money service business with the
+                    Financial Transactions and Reports Analysis Centre of Canada
+                    (FINTRAC) under registration number M23180753
+                  </p>
                 </div>
               </div>
             </div>
