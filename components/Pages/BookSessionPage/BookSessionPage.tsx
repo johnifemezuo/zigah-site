@@ -6,9 +6,9 @@ import toast, { Toaster } from "react-hot-toast";
 import Container from "../../../layout/Container";
 import { StyledLongText } from "../../../styles/styled-components/Styled-component";
 import FadIn from "../../../util/animation/FadIn";
-import { MAILJS_API } from "../../../util/api/apis";
 import Aurora from "../../Global/Aurora/Aurora";
 import Button from "../../Global/UI/Button/Button";
+import { MAILJS_API } from "../../../base/constant/variables";
 
 interface BookSessionPageI {
   fullName: string;
