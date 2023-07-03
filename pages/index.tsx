@@ -20,6 +20,8 @@ const HomeIndex: NextPage = () => {
   const homeInfo = data?.homepages[0] as IHomePage;
   const allLoading = loading || isLoading;
 
+  console.log("building")
+
   return (
     <>
       <Head>
