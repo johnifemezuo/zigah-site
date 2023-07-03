@@ -1,6 +1,4 @@
 /* eslint-disable no-undef */
-import { BASE_URL } from "../api/apis";
-
 // -----------Hook Data Fetcher-----------
 // await axios.get(`${BASE_URL}/api/${path}/?populate[projects][populate]=%2A
 
