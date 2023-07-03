@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "../../../layout/Container";
 import PadlockIcon from "../../Global/Icons/svg/PadlockIcon";
 import Button from "../../Global/UI/Button/Button";
@@ -23,8 +22,7 @@ function MeatTheTeam({ teamMembers }: any) {
 
             <Button
               isLoading={false}
-              className="btn inline-flex space-x-3 items-center uppercase btn-white"
-            >
+              className="btn inline-flex space-x-3 items-center uppercase btn-white">
               <span className="mb-1">
                 <PadlockIcon />
               </span>
